@@ -1,3 +1,9 @@
+gcc-4.6 (4.6.3-1ubuntu5+exo1) precise; urgency=medium
+
+  * Add upstream patch to use -fprofile and -ffunction-sections.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 14 May 2017 19:32:58 +0200
+
 gcc-4.6 (4.6.3-1ubuntu5) precise; urgency=low
 
   * Pursuant to the cross-distro consensus on the armhf linker path,

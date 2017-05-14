@@ -1,0 +1,32 @@
+From e83660d17a3ed9fb20339118d07452f5d95b27b2 Mon Sep 17 00:00:00 2001
+From: tmsriram <tmsriram@138bc75d-0d04-0410-961f-82ee72b054a4>
+Date: Fri, 7 Dec 2012 22:46:35 +0000
+Subject: [PATCH] 2012-12-07  Sriraman Tallan  <tmsriram@google.com>
+
+	* toplev.c (process_options): Do not warn when -ffunction-sections
+	and -fprofile are used together.
+
+
+
+git-svn-id: svn+ssh://gcc.gnu.org/svn/gcc/trunk@194311 138bc75d-0d04-0410-961f-82ee72b054a4
+---
+ gcc/toplev.c | 6 ------
+ 2 files changed, 5 insertions(+), 6 deletions(-)
+
+diff --git a/gcc/toplev.c b/gcc/toplev.c
+index 2c2898c..2f79575 100644
+--- a/src/gcc/toplev.c
++++ b/src/gcc/toplev.c
+@@ -1478,12 +1478,6 @@ process_options (void)
+ 	}
+     }
+ 
+-  if (flag_function_sections && profile_flag)
+-    {
+-      warning (0, "-ffunction-sections disabled; it makes profiling impossible");
+-      flag_function_sections = 0;
+-    }
+-
+ #ifndef HAVE_prefetch
+   if (flag_prefetch_loop_arrays > 0)
+     {

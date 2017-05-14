@@ -314,6 +314,8 @@ endif
 
 #debian_patches += address-clauses-timed-entry-calls
 
+debian_patches += ffunction-sections+fprofile
+
 series_stamp = $(stampdir)/02-series-stamp
 series: $(series_stamp)
 $(series_stamp):
